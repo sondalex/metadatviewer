@@ -1,0 +1,87 @@
+{
+    "app-id" : "io.github.sondalex.MetaDatViewer",
+    "_comment":"The runtime chosen and its runtime version is crucial. Some versions include old python version as well as old python devtools. They have to be chosen accordingly with the numpy package.",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "42",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "metadatviewer",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--device=dri",
+        "--socket=wayland"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+    	{
+	    "name": "python3-numpy",
+	    "buildsystem": "simple",
+	    "build-commands": [
+		"pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numpy==1.22.4\" --no-build-isolation"
+	    ],
+	    "sources": [
+		{
+		    "type": "file",
+		    "url": "https://files.pythonhosted.org/packages/f6/d8/ab692a75f584d13c6542c3994f75def5bce52ded9399f52e230fe402819d/numpy-1.22.4.zip",
+		    "sha256": "425b390e4619f58d8526b3dcf656dde069133ae5c240229821f01b5f44ea07af"
+		}
+	    ]
+	},
+	{
+	    "name": "python3-pyreadstat",
+	    "buildsystem": "simple",
+	    "build-commands": [
+		"pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyreadstat\" --no-build-isolation"
+	    ],
+	    "sources": [
+		{
+		    "type": "file",
+		    "url": "https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl",
+		    "sha256": "e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c"
+		},
+		{
+		    "type": "file",
+		    "url": "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl",
+		    "sha256": "961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
+		},
+		{
+		    "type": "file",
+		    "url": "https://files.pythonhosted.org/packages/f6/d8/ab692a75f584d13c6542c3994f75def5bce52ded9399f52e230fe402819d/numpy-1.22.4.zip",
+		    "sha256": "425b390e4619f58d8526b3dcf656dde069133ae5c240229821f01b5f44ea07af"
+		},
+		{
+		    "type": "file",
+		    "url": "https://files.pythonhosted.org/packages/5a/ac/b3b9aa2318de52e40c26ae7b9ce6d4e9d1bcdaf5da0899a691642117cf60/pandas-1.4.2.tar.gz",
+		    "sha256": "92bc1fc585f1463ca827b45535957815b7deb218c549b7c18402c322c7549a12"
+		},
+		{
+		    "type": "file",
+		    "url": "https://files.pythonhosted.org/packages/ca/5c/6ee498e71bbfa27f48031f3edd730a680cb98ad946815ceec7d650fc2b59/pyreadstat-1.1.7.tar.gz",
+		    "sha256": "a282ee124d25de9f401f0f640896b7b51dce2101c4698a044f92e16b1cd90542"
+		}
+	    ]
+	},
+        {
+            "name" : "metadatviewer",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "file:///home/alex/Projects/MetaDatViewer"
+                }
+            ]
+        }
+    ]
+}

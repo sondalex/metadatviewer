@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=metadatviewer
+Exec=metadatviewer %F
+Icon=io.github.sondalex.MetaDatViewer
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
