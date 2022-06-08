@@ -9,6 +9,20 @@
 
 For the moment only `.dta`(STATA) files are supported.
 
+Here's an example of the app when opening a stata file.
+
+![Example](example.gif)
+
+**Note:** 
+ 
+ The dataset displayed in this example comes from url: http://dss.princeton.edu/training/Panel101.dta  mentionned in:
+ - Oscar Torres-Reyna (2007). Panel Data Analysis
+ Fixed and Random Effects using Stata, Economis Department, Princeton. https://www.princeton.edu/~otorres/Panel101.pdf
+
+
+
+
+
 ## Building the Flatpak package
 
 ```console
