@@ -17,7 +17,7 @@ Here's an example of the app when opening a stata file.
  
  The dataset displayed in this example comes from url: http://dss.princeton.edu/training/Panel101.dta  mentionned in:
  - Oscar Torres-Reyna (2007). Panel Data Analysis
- Fixed and Random Effects using Stata, Economis Department, Princeton. https://www.princeton.edu/~otorres/Panel101.pdf
+ Fixed and Random Effects using Stata, Economics Department, Princeton. https://www.princeton.edu/~otorres/Panel101.pdf
 
 
 
