@@ -79,7 +79,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/alex/Projects/MetaDatViewer"
+                    "url" : "https://github.com/sondalex/metadatviewer"
                 }
             ]
         }
