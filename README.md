@@ -47,7 +47,7 @@ Package in a single-file bundle:
 ## Installing the Flatpak package
 
 The single bundle file <bundle-location.flatpak> can be installed by opening it
-with the gui-software installer of your linux based distribution or from the gui:
+with the gui-software installer of your linux based distribution or from the cli:
 
 ```console
 [user@desktop metadatviewer]$ flatpak install --user <bundle-location.flatpak>
