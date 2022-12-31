@@ -14,6 +14,14 @@ if desktop_utils.found()
   )
 endif
 
+mimefile = i18n.merge_file(
+  input: 'io.github.sondalex.MetaDatViewer.mimetype.xml.in',
+  output: 'io.github.sondalex.MetaDatViewer.application-x-stata-dta.xml',
+  po_dir: '../po',
+  install: true,
+  install_dir: join_paths(get_option('datadir'), 'mime/packages')
+)
+
 appstream_file = i18n.merge_file(
   input: 'io.github.sondalex.MetaDatViewer.appdata.xml.in',
   output: 'io.github.sondalex.MetaDatViewer.appdata.xml',
