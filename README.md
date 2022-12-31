@@ -38,6 +38,10 @@ Here's an example of the app when opening a stata file.
 ```console
 [user@desktop metadatviewer]$ flatpak-builder --repo=<repo> --force-clean <build-dir> io.github.sondalex.MetaDatViewer.json
 ```
+
+Note that repo does not refer to the repository of source code.
+Simplifying it is a directory to store an intermediate representation of the build (prior single build building). 
+
 Package in a single-file bundle:
 
 ```console

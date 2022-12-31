@@ -1,2 +1,5 @@
 venv/
 .flatpak-builder/
+build/
+repo/
+*.flatpak

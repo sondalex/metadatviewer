@@ -1,6 +1,7 @@
 data/io.github.sondalex.MetaDatViewer.desktop.in
 data/io.github.sondalex.MetaDatViewer.appdata.xml.in
 data/io.github.sondalex.MetaDatViewer.gschema.xml
+data/io.github.sondalex.MetaDatViewer.mimetype.xml.in
 src/window.ui
 src/main.py
 src/window.py
