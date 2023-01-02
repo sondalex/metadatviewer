@@ -63,3 +63,20 @@ with the gui-software installer of your linux based distribution or from the cli
 New features, issue reports and packaging to non-linux based OS are more than
 welcome.
  
+## Development
+
+Testing the flatpak
+
+Build if not already built
+
+```console
+flatpak-builder build --force-clean io.github.sondalex.MetaDatViewer.json
+```
+
+```console
+flatpak-builder --user --install --force-clean build io.github.sondalex.MetaDatViewer.json
+```
+
+```console
+flatpak run io.github.sondalex.MetaDatViewer
+```
